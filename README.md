@@ -1,4 +1,5 @@
 madblog
 =======
 
-simple multi user blog written in python
+simple multi user blog written in python using webpy framework
+ 
