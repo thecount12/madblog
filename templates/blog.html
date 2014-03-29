@@ -1,0 +1,16 @@
+$def with (posts)
+
+
+<h2>Blog posts</h2>
+
+<ul>
+$for post in posts:
+    <li>
+        <h4><a href="blogview/$post.id">$post.title</a></h4>
+        <p>Author: $post.author $post.date
+    </li>
+</ul>
+
+
+
+

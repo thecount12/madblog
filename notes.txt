@@ -1,0 +1,34 @@
+Any user can post:
+goal admin or author post:
+if admin=YES or author=YES
+****  Users ****
+-Username	-works
+-mpassword	-works
+-date
+-hint
+-admin		"Yes"
+-author		"Yes" 
+-view
+
+-----------------------------
+all blogs are visible
+goal only approved or published
+
+**** blog ****
+-title
+-author
+-username
+-content
+-approved	"Yes" 
+-published	"Yes" 
+-date
+
+-----------------------------
+done!!!
+**** Registration ****
+
+----------------------------
+Admin to manage users
+
+-users
+-pages 

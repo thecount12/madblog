@@ -1,0 +1,31 @@
+#ZZcat setup.py | grep '#=' | awk -F'#=' '{print $2}'
+#=mkdir static
+#=mkdir templates
+#=echo "
+#=drop table if exists users;
+#=create table users(
+#=id integer primary key autoincrement,
+#=username text not null,
+#=mpassword text not null,
+#=email text,
+#=date text, 
+#=hint text, 
+#=admin text, 
+#=author text, 
+#=view text 
+#=);" > schema.sql
+#=
+#=echo "
+#=drop table if exists blog; 
+#=create table blog (
+#=id INTEGER PRIMARY KEY autoincrement, 
+#=title TEXT, 
+#=author TEXT,
+#=username TEXT, 
+#=content TEXT, 
+#=approved TEXT,
+#=published TEXT,
+#=date TEXT);" >> schema.sql
+#=sqlite3 ./multi.db < schema.sql
+
+#=sqlite3 multi.db "insert into users (username,mpassword,admin) values ('count', 'dune02','Yes');" 
