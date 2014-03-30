@@ -23,6 +23,7 @@ urls = (
 	'/blog', 'blogview.Blog', 
 	'/blogview/(\d+)','blogview.BlogView',
 	'/blognew','blogview.BlogNew', 
+	'/blogspecial','blogview.BlogSpecial',
 	'/blogdelete/(\d+)','blogview.BlogDelete',
         '/blogedit/(\d+)','blogview.BlogEdit',
         '/blogadmin','blogview.BlogAdmin',

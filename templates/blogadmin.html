@@ -3,10 +3,12 @@ $def with (posts)
 
 <h2>Blog posts</h2>
 
+<p><a href="/admin">Return to admin dashboard</a>
+
 <ul>
 $for post in posts:
     <li>
-        <h4><a href="blogedit/$post.id">$post.title</a></h4>
+        <h4><a href="blogedit/$post.id">$post.title</a> | $post.approved | $post.published</h4>
         <p>Author: $post.author $post.date
     </li>
 </ul>

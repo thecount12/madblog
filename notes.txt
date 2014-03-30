@@ -1,41 +1,42 @@
-Any user can post:
-goal admin or author post:
-if admin=YES or author=YES
-****  Users ****
--Username	-works
--mpassword	-works
--date
--hint
--admin		"Yes"
--author		"Yes" 
--view
+List of urls and functions
 
 -----------------------------
-all blogs are visible
-goal only approved or published
+Root Site 192.168.1.1:1234 
+run.sh
 
-**** blog ****
--title
--author
--username
--content
--approved	"Yes" 
--published	"Yes" 
--date
-
------------------------------
+""			- reads hello 
 done!!!
-**** Registration ****
+-----------------------------
+Blog
 
+/blog 			- approved=="Yes" published=="Yes"
+done!!!
+-----------------------------
+Registration
+
+/register		- anybody can register 
+done!!!
 ----------------------------
-Admin to manage users
+Admin manage users
 
-admin -dashboard 
-adminuser - list users 
-adminusernew - create new user - not required => use register 
-adminuserdelete
-adminuseredit
+/admin 			- dashboard 
+/adminuser 		- list users 
+/adminusernew 		- create new user 
+/adminuserdelete/id 	- delete user
+/adminuseredit/id	- edit user author=="Yes" admin=="Yes" view=="Yes" 
+done!!!
+----------------------------
+Admin manage blog pages
 
+/blogadmin 		- for admin
+/blogedit/id 		- for admin # id number of post
+/blogspecial 		- for admin to create new blog 
+/blognew 		- if author=="Yes" approved=="No" published=="No"
+/blogdelete/id 		- for admin # id number of post use /blogedit to delete
+done!!!
+----------------------------
+Private page
 
-
--pages 
+/private		- example of page requiring authentication to a page
+done!!!
+ 
