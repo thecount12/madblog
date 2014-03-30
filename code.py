@@ -27,7 +27,11 @@ urls = (
         '/blogedit/(\d+)','blogview.BlogEdit',
         '/blogadmin','blogview.BlogAdmin',
 	'/register','Register',
-	'/admin','adminview.Admin'
+	'/admin','adminview.Admin',
+	'/adminuser','adminview.AdminUser', 
+	'/adminusernew','adminview.AdminUserNew',
+	'/adminuserdelete/(\d+)','adminview.AdminUserDelete',
+	'/adminuseredit/(\d+)','adminview.AdminUserEdit',
 )
 
 render=web.template.render('templates/')

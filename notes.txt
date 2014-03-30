@@ -30,5 +30,12 @@ done!!!
 ----------------------------
 Admin to manage users
 
--users
+admin -dashboard 
+adminuser - list users 
+adminusernew - create new user - not required => use register 
+adminuserdelete
+adminuseredit
+
+
+
 -pages 
