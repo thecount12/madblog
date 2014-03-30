@@ -39,4 +39,21 @@ Private page
 
 /private		- example of page requiring authentication to a page
 done!!!
- 
+
+Things to do:
+
+1. altar blog to include excerpt
+2. create comments table - must be a user
+	- comments form db.insert('comments', id,blogtitle,comment,date, capproved) 
+	- comments method input
+	- comments admin approved
+	- blog: adjust capproved=="Yes" 
+	
+	temporary fix adjust blog template to include email form
+	-manualy edit each blog post
+3. pagination (view 1-5 or 1-10 next button
+4. layout instructions
+	can be used with 960.gs, skeleton.gs , bootstrap, boilerplater
+
+
+
