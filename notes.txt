@@ -39,6 +39,12 @@ Private page
 
 /private		- example of page requiring authentication to a page
 done!!!
+----------------------------
+Contact form
+
+/contact		- uses pvgmail and base64 which should be replaced with md5
+done!!!
+----------------------------
 
 Things to do:
 
@@ -49,11 +55,11 @@ Things to do:
 	- comments admin approved
 	- blog: adjust capproved=="Yes" 
 	
-	temporary fix adjust blog template to include email form
-	-manualy edit each blog post
-3. pagination (view 1-5 or 1-10 next button
+	* temporary fix adjust blog.html template to include email form 
+	- manualy edit each blog post to add comments (sux) 
+3. pagination (view 1-5 or 1-10) next button
 4. layout instructions
-	can be used with 960.gs, skeleton.gs , bootstrap, boilerplater
-
+	can be used with 960.gs, skeleton.gs , bootstrap, boilerplate
+5. dynamicly add pages - similar to (django static pages)
 
 

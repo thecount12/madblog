@@ -95,7 +95,7 @@ class AdminUserNew:
                         try:
                                 uauth=db.select('users', where='username=$muser', vars=locals())[0]
                         except:
-                                return "username does not exist"
+                                return "username does not exist or you have been logged out"
                         if (mpass==uauth.mpassword and muser==uauth.username and uauth.admin=="Yes"):
                                 form=self.form()
                                 return render.adminusernew(form)
