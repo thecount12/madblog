@@ -1,9 +1,8 @@
 # madblog
 =======
 
-Simple multi user blog written in python using webpy.org framework
-
-you can use any theme such as boilerplate, bootstrap, 960.gs, skeleton-gs etc...
+Simple multi user blog written in python using webpy.org framework.
+You can use any theme such as boilerplate, bootstrap, 960.gs, skeleton-gs etc...
 
 ----
 
@@ -32,10 +31,8 @@ CHANGE THEMES
 
 
 Changing "render" variable changes how or where html files are rendered 
-in the template directory it also affects each "class method" and how
-its rendered. 
-
-for instance:
+in the template directory it also affects each "class method object" and how
+it's rendered. For instance: 
 
 	render=web.template.render('templates/')
 	brender=web.template.render('templates/')
@@ -73,11 +70,9 @@ Here is an example of layout.html:
 	</center>
 	<hr>
 		<!-- header end --> 
-
 		<!-- main content begin # notice dollar sign :content-->
 	$:content
 		<!-- main content end-->
-
 		<!-- footer begin -->
 	<hr>
 	<center> &copy; www.domain.com</center>
