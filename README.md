@@ -27,16 +27,15 @@ Check out notes.txt for additional details and todo:
 CHANGE THEMES
 
 1. edit code.py and look for:
-	uncomment below for theme change 
-	render=web.template.render('templates/')
-	render=web.template.render('templates/', base='layout') # layout.html
+	- render=web.template.render('templates/')
+	- render=web.template.render('templates/', base='layout') # layout.html
 
 
-	Changing "render" variable changes how or where html files are rendered 
-	in the template directory it also affects each "class method" and how
-	its rendered. 
+Changing "render" variable changes how or where html files are rendered 
+in the template directory it also affects each "class method" and how
+its rendered. 
 
-	for instance:
+for instance:
 
 	render=web.template.render('templates/')
         brender=web.template.render('templates/')
