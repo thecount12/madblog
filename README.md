@@ -46,13 +46,13 @@ for instance:
 		def GET(self)
 			return brender.test2() # /templates/test2.html
 
-	both variables for render and brender are uncommented and can be used
-	
+both variables for render and brender are uncommented and can be used
+for each "class" object.	
 
-	base='layout' allows you to utilize a header, footer and stylesheet
-	on all pages 
+The base='layout' allows you to utilize a header, footer and stylesheet
+on all pages. 
 
-example layout.html:
+Here is an example of layout.html:
 
  
 	$def with (content)
