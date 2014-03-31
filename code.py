@@ -40,7 +40,7 @@ urls = (
 	'/contact','Contact',
 )
 
-# *********uncomment for theme*********
+# *********uncomment below for theme change *********
 render=web.template.render('templates/')
 #render=web.template.render('templates/', base='layout') # layout.html
 
