@@ -34,8 +34,8 @@ Changing "render" variable changes how or where html files are rendered
 in the template directory it also affects each "class method object" and how
 it's rendered. For instance: 
 
-	render=web.template.render('templates/')
-	brender=web.template.render('templates/')
+	render=web.template.render('templates/', base='layout') # layout.html
+	brender=web.template.render('templates/', base=layout2') # layout2.html 
 	class Test:
 		def GET(self):
 			return render.test() # /templates/test.html
@@ -44,7 +44,7 @@ it's rendered. For instance:
 			return brender.test2() # /templates/test2.html
 
 both variables for render and brender are uncommented and can be used
-for each "class" object.	
+for each "class" object with different layouts.	
 
 The base='layout' allows you to utilize a header, footer and stylesheet
 on all pages. 
