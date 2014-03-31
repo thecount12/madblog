@@ -38,7 +38,7 @@ its rendered.
 for instance:
 
 	render=web.template.render('templates/')
-        brender=web.template.render('templates/')
+	brender=web.template.render('templates/')
 	class Test:
 		def GET(self):
 			return render.test() # /templates/test.html
