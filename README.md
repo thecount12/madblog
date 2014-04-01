@@ -45,11 +45,11 @@ CHANGE THEMES
 		def GET(self)
 			return brender.test2() # /templates/test2.html
 
-Both variables for "render" and "brender" are uncommented and can be used
-for each "class" object with different layouts. The "base='layout'" allows
-you to utilize a header, footer, and stylesheet on all pages.	
+ Both variables for "render" and "brender" are uncommented and can be used
+ for each "class" object with different layouts. The "base='layout'" allows
+ you to utilize a header, footer, and stylesheet on all pages.	
 
-Here is an example of layout.html:
+ Here is an example of layout.html:
 
  
 	$def with (content)
@@ -83,7 +83,7 @@ Here is an example of layout.html:
 2. changing html files and adding new pages. All html files exist in /templates 
 directory. However you need to modify code.py to make them appear. 
 
-Here is an example of adding a new page: 
+ Here is an example of adding a new page: 
 
 	urls=(
 		'/newpage','Newpage'
@@ -92,5 +92,5 @@ Here is an example of adding a new page:
 		def GET(self):
 			return render.newpage(): 	
 
-newpage.html should exist in /templates directory  
+ newpage.html should exist in /templates directory  
  
