@@ -14,7 +14,10 @@ urls=(
 
 )
 
-render=web.template.render('templates/')
+#render=web.template.render('templates/')
+admrender=web.template.render('templates/', base='adminlayout')#adminlayout.html
+#render=web.template.render('templates/', base='layout')
+render=web.template.render('templates/', base='layout960') # layout960.html 
 db=web.database(dbn='sqlite',db='multi.db')
 
 
@@ -117,7 +120,7 @@ class BlogSpecial:
 				return "username does not exist"
 			if (mpass==uauth.mpassword and muser==uauth.username and uauth.admin=="Yes"): 
 				form=self.form() 
-				return render.blognew(form)
+				return admrender.blogspecial(form)
 			else:
                         	raise web.seeother('/login/blogspecial')
                 else:
@@ -127,7 +130,7 @@ class BlogSpecial:
                 web.ctx.username = muser = web.cookies(username=None).username
                 form = self.form()
                 if not form.validates():
-                        return render.blognew(form)
+                        return admrender.blognewspecial(form)
                 #modelblog.new_post(form.d.title, form.d.author, form.d.content, form.d.date)
 		db.insert('blog', title=form.d.title, author=form.d.author, content=form.d.content, date=form.d.date, approved=form.d.approved, published=form.d.published,username=muser )
                 raise web.seeother('/blogadmin')
@@ -152,7 +155,7 @@ class BlogEdit:
                			#form = BlogNew.form()
                			form = BlogSpecial.form()
 				form.fill(post)
-				return render.blogedit(post, form)
+				return admrender.blogedit(post, form)
 			else:
                         	raise web.seeother('/login/blogedit/%s' % id)
                 else:
@@ -165,7 +168,7 @@ class BlogEdit:
                 form = BlogSpecial.form()
                 post = modelblog.get_post(int(id))
                 if not form.validates():
-                        return render.blogedit(post, form)
+                        return admrender.blogedit(post, form)
                 #modelblog.update_post(int(id), form.d.title, form.d.author, form.d.content,form.d.date)
 		db.update('blog', where="id=$id", vars=locals(),
                 title=form.d.title, author=form.d.author, content=form.d.content, date=form.d.date, approved=form.d.approved, published=form.d.published)
@@ -183,7 +186,7 @@ class BlogAdmin: # add login features
 					# remove nested if for single user only 
 			if (mpass==uauth.mpassword and muser==uauth.username and uauth.admin=="Yes"): 
 				posts = modelblog.get_posts()
-				return render.blogadmin(posts)
+				return admrender.blogadmin(posts)
 			else:
                         	raise web.seeother('/login/blogadmin')
                 else:

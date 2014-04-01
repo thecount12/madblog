@@ -28,6 +28,8 @@ CHANGE THEMES
 1. edit code.py and look for:
 	- render=web.template.render('templates/')
 	- render=web.template.render('templates/', base='layout') # layout.html
+	- admrender=web.template.render('templates/', base='adminlayout')#adminlayout.html
+	- render=web.template.render('templates/', base='layout960') # layout960.html
 
 
 Changing "render" variable changes how or where html files are rendered 

@@ -10,7 +10,10 @@ urls=(
 	"/adminuseredit/(\d+)","AdminUserEdit"
 )
 
-render=web.template.render('templates/')
+#render=web.template.render('templates/')
+#render=web.template.render('templates/', base='layout')
+render=web.template.render('templates/', base='layout960') # layout960.html 
+admrender=web.template.render('templates/', base='adminlayout')#adminlayout.html
 db=web.database(dbn='sqlite',db='multi.db')
 
 
@@ -31,7 +34,7 @@ class Admin: # just a private page example that requires login
                 #if mpass == 'dune02':  # test login without db
                                         # remove nested if for single user only
                         if (mpass==uauth.mpassword and muser==uauth.username and uauth.admin=="Yes"):
-                                return render.admin() # test redirect
+                                return admrender.admin() # test redirect
                         else:
                                 raise web.seeother('/login/admin')
                 else:
@@ -50,7 +53,7 @@ class AdminUser:
                                         # remove nested if for single user only
                         if (mpass==uauth.mpassword and muser==uauth.username and uauth.admin=="Yes"):
 				luser=db.select("users", order='id DESC') 
-                                return render.adminuser(luser) # test redirect
+                                return admrender.adminuser(luser) # test redirect
                         else:
                                 raise web.seeother('/login/adminuser')
                 else:
@@ -98,7 +101,7 @@ class AdminUserNew:
                                 return "username does not exist or you have been logged out"
                         if (mpass==uauth.mpassword and muser==uauth.username and uauth.admin=="Yes"):
                                 form=self.form()
-                                return render.adminusernew(form)
+                                return admrender.adminusernew(form)
                         else:
                                 raise web.seeother('/login/adminusernew')
                 else:
@@ -106,7 +109,7 @@ class AdminUserNew:
         def POST(self):
                 form = self.form()
                 if not form.validates():
-                        return render.adminusernew(form)
+                        return admrender.adminusernew(form)
                 db.insert('users', username=form.d.username, mpassword=form.d.mpassword, email=form.d.email, hint=form.d.hint, admin=form.d.admin, author=form.d.author,view=form.d.view,date=form.d.date)
                 raise web.seeother('/adminuser')
 
@@ -129,7 +132,7 @@ class AdminUserEdit:
                                 luser= db.select('users', where='id=$id', vars=locals())[0]
                                 form =AdminUserNew.form()
                                 form.fill(luser)
-                                return render.adminuseredit(luser, form)
+                                return admrender.adminuseredit(luser, form)
                         else:
                                 raise web.seeother('/login/blogedit/%s' % id)
                 else:
@@ -141,7 +144,7 @@ class AdminUserEdit:
                 form = AdminUserNew.form()
                 luser= db.select('users', where='id=$id', vars=locals())[0]
                 if not form.validates():
-                        return render.adminuseredit(luser, form)
+                        return admrender.adminuseredit(luser, form)
 		db.update('users', where="id=$id", vars=locals(),
                 username=form.d.username, mpassword=form.d.mpassword, email=form.d.email, hint=form.d.hint, admin=form.d.admin, author=form.d.author,view=form.d.view,date=form.d.date)
                 raise web.seeother('/adminuser')

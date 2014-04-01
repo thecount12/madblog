@@ -41,8 +41,10 @@ urls = (
 )
 
 # *********uncomment below for theme change *********
-render=web.template.render('templates/')
+#render=web.template.render('templates/')
 #render=web.template.render('templates/', base='layout') # layout.html
+admrender=web.template.render('templates/', base='adminlayout')#adminlayout.html
+render=web.template.render('templates/', base='layout960') # layout960.html
 
 
 db=web.database(dbn='sqlite',db='multi.db')
