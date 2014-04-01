@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>madblog simple multi-user python blog</title>
+</head>
+<body>
+<h2>madblog</h2>
+<center>
+<p><a href="/">Home</a> | 
+<a href="/blog">Blog</a> | 
+<a href="/contact">Contact</a> | 
+<a href="/register">Register</a> | 
+<a href="/login/">Login</a> |
+<a href="/logout">Logout</a>  
+</center>
+<hr>
+
+</body>
+
+
+</html>
+

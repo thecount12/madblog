@@ -1,0 +1,12 @@
+$def with (luser)
+$var cssfiles: static/admin.css
+<div class=page>
+<h2>Admin user page</h2>
+
+<u1>
+$for u in luser:
+	<li><a href="adminuseredit/$u.id">$u.username</a></li>
+</ul>
+
+<p><a href="/admin">Admin Screen</a>
+</div>
