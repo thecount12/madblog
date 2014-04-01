@@ -25,16 +25,16 @@ Check out notes.txt for additional details and todo:
 
 CHANGE THEMES
 
-A) edit code.py and look for:
+1. edit code.py and look for:
 	- render=web.template.render('templates/')
 	- render=web.template.render('templates/', base='layout') # layout.html
 	- admrender=web.template.render('templates/', base='adminlayout')#adminlayout.html
 	- render=web.template.render('templates/', base='layout960') # layout960.html
 
 
-Changing "render" variable changes how or where html files are rendered 
-in the template directory it also affects each "class method object" and how
-it's rendered. For instance: 
+ Changing "render" variable changes how or where html files are rendered 
+ in the template directory it also affects each "class method object" and how
+ it's rendered. For instance: 
 
 	render=web.template.render('templates/', base='layout') # layout.html
 	brender=web.template.render('templates/', base=layout2') # layout2.html 
@@ -80,7 +80,7 @@ Here is an example of layout.html:
 	</body>
 	</html>
 
-B) changing html files and adding new pages. All html files exist in /templates 
+2. changing html files and adding new pages. All html files exist in /templates 
 directory. However you need to modify code.py to make them appear. 
 
 Here is an example of adding a new page: 
