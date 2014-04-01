@@ -90,6 +90,7 @@ an example of adding a new page:
 
 	class Newpage
 		def GET(self):
-			return render.newpage(): 	# newpage.html should 
-							#exist in /templates directory
+			return render.newpage(): 	
+
+newpage.html should exist in /templates directory  
  
