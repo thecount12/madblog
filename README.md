@@ -25,7 +25,7 @@ Check out notes.txt for additional details and todo:
 
 CHANGE THEMES
 
-1. edit code.py and look for:
+A) edit code.py and look for:
 	- render=web.template.render('templates/')
 	- render=web.template.render('templates/', base='layout') # layout.html
 	- admrender=web.template.render('templates/', base='adminlayout')#adminlayout.html
@@ -80,7 +80,7 @@ Here is an example of layout.html:
 	</body>
 	</html>
 
-2. changing html files and adding new pages. All html files exist in /templates 
+B) changing html files and adding new pages. All html files exist in /templates 
 directory. However you need to modify code.py to make them appear. 
 
 Here is an example of adding a new page: 
