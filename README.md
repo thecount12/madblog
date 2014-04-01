@@ -32,9 +32,9 @@ CHANGE THEMES
 	- render=web.template.render('templates/', base='layout960') # layout960.html
 
 
- Changing "render" variable changes how or where html files are rendered 
- in the template directory it also affects each "class method object" and how
- it's rendered. For instance: 
+Changing "render" variable changes how or where html files are rendered 
+in the template directory it also affects each "class method object" and how
+it's rendered. For instance: 
 
 	render=web.template.render('templates/', base='layout') # layout.html
 	brender=web.template.render('templates/', base=layout2') # layout2.html 
@@ -45,11 +45,11 @@ CHANGE THEMES
 		def GET(self)
 			return brender.test2() # /templates/test2.html
 
- Both variables for "render" and "brender" are uncommented and can be used
- for each "class" object with different layouts. The "base='layout'" allows
- you to utilize a header, footer, and stylesheet on all pages.	
+Both variables for "render" and "brender" are uncommented and can be used
+for each "class" object with different layouts. The "base='layout'" allows
+you to utilize a header, footer, and stylesheet on all pages.	
 
- Here is an example of layout.html:
+Here is an example of layout.html:
 
  
 	$def with (content)
@@ -83,7 +83,7 @@ CHANGE THEMES
 2. changing html files and adding new pages. All html files exist in /templates 
 directory. However you need to modify code.py to make them appear. 
 
- Here is an example of adding a new page: 
+Here is an example of adding a new page: 
 
 	urls=(
 		'/newpage','Newpage'
