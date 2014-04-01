@@ -4,9 +4,10 @@
 Simple multi user blog written in python using webpy.org framework.
 You can use any theme such as boilerplate, bootstrap, 960.gs, skeleton-gs etc...
 
-----
-
 Check out notes.txt for additional details and todo:
+
+----
+RUNNING IN 4 STEPS
 
 1. download master.zip and make sure following dependencies are installed 
 	- sudo apt-get install python-webpy
