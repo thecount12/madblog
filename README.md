@@ -81,8 +81,9 @@ Here is an example of layout.html:
 	</html>
 
 2. changing html files and adding new pages. All html files exist in /templates 
-directory. However you need to modify code.py to make them appear. Here is
-an example of adding a new page:
+directory. However you need to modify code.py to make them appear. 
+
+Here is an example of adding a new page: 
 
 	urls=(
 		'/newpage','Newpage'
