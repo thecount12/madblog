@@ -87,7 +87,7 @@ an example of adding a new page:
 	urls=(
 		'/newpage','Newpage'
 	)
-	class Newpage
+	class Newpage: 
 		def GET(self):
 			return render.newpage(): 	
 
