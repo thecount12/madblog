@@ -80,6 +80,9 @@ Here is an example of layout.html:
 	</body>
 	</html>
 
+----
+CHANGE HTML PAGES
+
 2. changing html files and adding new pages. All html files exist in /templates 
 directory. However you need to modify code.py to make them appear. 
 
