@@ -10,9 +10,9 @@ urls=(
 	"/adminuseredit/(\d+)","AdminUserEdit"
 )
 
-#render=web.template.render('templates/')
+render=web.template.render('templates/')
 #render=web.template.render('templates/', base='layout')
-render=web.template.render('templates/', base='layout960') # layout960.html 
+#render=web.template.render('templates/', base='layout960') # layout960.html 
 admrender=web.template.render('templates/', base='adminlayout')#adminlayout.html
 db=web.database(dbn='sqlite',db='multi.db')
 
